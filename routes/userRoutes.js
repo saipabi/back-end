@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User =require('../models/User');
-const History = require('../models/History')
+const History = require('../models/ClaimHistory')
 
 router.get('/users',async (req,res)=>{
     const users = await User.find().sort({totalPoints:-1});
